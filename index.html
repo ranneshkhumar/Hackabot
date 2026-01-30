@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xyntra'26 Hackathon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #4c1d95;
+      --secondary: #7c3aed;
+      --bg: #f5f3ff;
+      --dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-buttons button {
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero-buttons button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* SECTION */
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #374151;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      border-radius: 25px;
+      padding: 60px 30px;
+      text-align: center;
+      margin: 80px auto;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #e0e7ff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Xyntra'26 Hackathon</h1>
+      <p>
+        A national-level hackathon organized by our club to ignite innovation,
+        creativity, and real-world problem solving using technology.
+      </p>
+
+      <div class="hero-buttons">
+        <button onclick="alert('Registrations opening soon!')">Register Now</button>
+        <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>Why Xyntra'26?</h2>
+    <p>
+      Xyntra'26 is more than a hackathon. It’s a platform for students to build,
+      collaborate, and showcase impactful solutions guided by mentors and
+      evaluated by industry experts.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>💡 Innovation</h3>
+        <p>Work on real-world problems and turn ideas into prototypes.</p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Collaboration</h3>
+        <p>Team up with passionate developers, designers, and thinkers.</p>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Recognition</h3>
+        <p>Win prizes, certificates, and gain recognition from experts.</p>
+      </div>
+
+      <div class="card">
+        <h3>🤖 AI Assistant</h3>
+        <p>
+          Have doubts? Use our AI-powered hackathon assistant anytime using the
+          chat widget at the bottom-right.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Have Questions?</h2>
+    <p>
+      Our AI Hackathon Assistant is available 24/7 to answer questions related
+      to rules, timelines, submissions, and evaluation.
+    </p>
+    <p style="margin-top:15px;font-weight:600;">
+      👉 Click the chat icon at the bottom-right to get started!
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Xyntra Hackathon | Organized by the Club | Powered by AI
+  </footer>
+
+  <!-- 🔥 CHATBOT WIDGET (DO NOT TOUCH) -->
+  <script src="/chatbot/widget.js"></script>
+<!-- Chatbot Widget Button -->
+<div id="chatbot-widget" onclick="toggleChatbot()">💬</div>
+
+<!-- Chatbot Iframe -->
+<iframe
+  id="chatbot-frame"
+  src="chatbot.html"
+  title="Xyntra Chatbot"
+></iframe>
+
+<style>
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6a00ff;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#chatbot-frame {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 360px;
+  height: 520px;
+  border: none;
+  border-radius: 12px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+</style>
+
+<script>
+function toggleChatbot() {
+  const frame = document.getElementById("chatbot-frame");
+  frame.style.display = frame.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
