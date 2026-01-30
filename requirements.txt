@@ -9,4 +9,3 @@ sentence-transformers
 faiss-cpu
 pypdf
 python-dotenv
-openrouter-python
