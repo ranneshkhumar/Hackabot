@@ -13,9 +13,9 @@ from pydantic import BaseModel
 # ---------------- LangChain Imports ----------------
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
 
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import FakeEmbeddings
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -54,9 +54,7 @@ class Question(BaseModel):
 
 # ================= VECTOR DB =====================
 def load_vector_db():
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    embeddings = FakeEmbeddings(size=384)
 
     if os.path.exists(DB_PATH):
         return FAISS.load_local(
